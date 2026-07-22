@@ -1,7 +1,7 @@
 (() => {
   const params = new URLSearchParams(location.search); const guest = params.get('to'); if(guest) document.getElementById('guest-name').textContent = guest;
   setTimeout(()=>document.getElementById('intro').classList.add('intro-out'), 4900);
-  document.getElementById('open-invitation').addEventListener('click',()=>{document.getElementById('cover').classList.add('cover-hidden');document.body.classList.remove('invitation-locked')});
+  document.getElementById('open-invitation').addEventListener('click',()=>{document.getElementById('cover').classList.add('cover-hidden');document.body.classList.remove('invitation-locked');if(galleryVideo)galleryVideo.play().catch(()=>{})});
   const slides = [...document.querySelectorAll('.slide')];
   const dots = [...document.querySelectorAll('.dots button')];
   let current = 0, timer;
@@ -17,5 +17,9 @@
   const api = async (data = null) => { const response = await fetch('api.php', data ? {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)} : {}); const result = await response.json(); if (!response.ok) throw new Error(result.error || 'Something went wrong.'); return result; };
   document.getElementById('rsvp-form').addEventListener('submit',async e=>{e.preventDefault();const status=e.target.querySelector('.form-status');status.textContent='Menyimpan...';try{const data=Object.fromEntries(new FormData(e.target));await api({action:'rsvp',...data});e.target.reset();status.textContent='Terima kasih, RSVP Anda telah diterima.'}catch(error){status.textContent=error.message;}});
   const list=document.getElementById('wish-list'); const safe=value=>String(value).replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char])); async function renderWishes(){try{const {wishes}=await api();list.innerHTML=wishes.map(w=>`<article class="wish"><p>“${safe(w.wish)}”</p><span>— ${safe(w.name)}</span></article>`).join('')||'<p class="form-status">Jadilah yang pertama mengirim ucapan.</p>'}catch(error){list.innerHTML='<p class="form-status">Ucapan belum dapat dimuat.</p>';}}renderWishes();document.getElementById('wish-form').addEventListener('submit',async e=>{e.preventDefault();try{const data=Object.fromEntries(new FormData(e.target));await api({action:'wish',...data});e.target.reset();renderWishes()}catch(error){alert(error.message)}});
-  const music=document.getElementById('music'), musicToggle=document.getElementById('music-toggle');musicToggle.addEventListener('click',async()=>{if(!music.querySelector('source'))return;if(music.paused){try{await music.play();musicToggle.textContent='♫';musicToggle.classList.add('playing');musicToggle.setAttribute('aria-label','Pause background music')}catch(e){musicToggle.title='Your browser blocked audio playback. Tap again to try.'}}else{music.pause();musicToggle.textContent='♩';musicToggle.classList.remove('playing');musicToggle.setAttribute('aria-label','Play background music')}});
+  const musicToggle=document.getElementById('music-toggle');
+  const galleryVideo=document.querySelector('.gallery-video video');
+  function syncSoundButton(){if(!galleryVideo)return;const muted=galleryVideo.muted;musicToggle.textContent=muted?'♩':'♫';musicToggle.classList.toggle('playing',!muted);musicToggle.setAttribute('aria-label',muted?'Unmute video sound':'Mute video sound')}
+  if(galleryVideo){galleryVideo.addEventListener('volumechange',syncSoundButton);syncSoundButton()}
+  musicToggle.addEventListener('click',()=>{if(galleryVideo)galleryVideo.muted=!galleryVideo.muted});
 })();
