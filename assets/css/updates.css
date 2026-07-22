@@ -1,2 +1,91 @@
-.invitation-locked{overflow:hidden;height:100svh}.gallery-frame{position:relative;margin-top:22px}.gallery-track{overscroll-behavior-x:contain;touch-action:pan-x;padding-bottom:16px}.gallery-arrow{position:absolute;z-index:2;top:50%;transform:translateY(-50%);border:1px solid #d8c7b4;background:#fff;color:#896e50;width:40px;height:40px;border-radius:50%;font-size:1.35rem;cursor:pointer;box-shadow:0 3px 10px #5a40301a}.gallery-arrow.previous{left:-12px}.gallery-arrow.next{right:-12px}.thanks-section{padding:82px 24px;text-align:center;background:linear-gradient(#f4f0ea,#d7b993)}.thanks-section h2{font:clamp(2.8rem,11vw,4.2rem) 'DM Serif Display',serif;color:#5c4132;margin:25px 0 10px}.thanks-photo{width:128px;height:128px;border-radius:50%;object-fit:cover;box-shadow:0 7px 19px #5a40304a}.thanks-lead{max-width:720px;margin:28px auto;font:1.15rem/1.7 'DM Serif Display',serif;color:#4b3b2f}.thanks-note{max-width:660px;margin:0 auto 40px;font:1rem/1.7 'DM Serif Display',serif;color:#5c4738}.thanks-note a{color:#5c4132}.thanks-section .script{font-size:3.2rem;line-height:1.1}.celebration{margin-top:46px;font-size:.77rem;color:#654d3b}#open-invitation{animation:invitationPulse 1.8s ease-in-out infinite}@keyframes invitationPulse{50%{transform:scale(1.075);box-shadow:0 8px 23px #0006}}
-.gallery-video video{display:block;width:100%;height:360px;object-fit:cover;background:#2c211c}
+.invitation-locked {
+  overflow: hidden;
+  height: 100svh;
+}
+.gallery-frame {
+  position: relative;
+  margin-top: 22px;
+}
+.gallery-track {
+  overscroll-behavior-x: contain;
+  touch-action: pan-x;
+  padding-bottom: 16px;
+}
+.gallery-arrow {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid #d8c7b4;
+  background: #fff;
+  color: #896e50;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.35rem;
+  cursor: pointer;
+  box-shadow: 0 3px 10px #5a40301a;
+}
+.gallery-arrow.previous {
+  left: -12px;
+}
+.gallery-arrow.next {
+  right: -12px;
+}
+.thanks-section {
+  padding: 82px 24px;
+  text-align: center;
+  background: linear-gradient(#f4f0ea, #d7b993);
+}
+.thanks-section h2 {
+  font: clamp(2.8rem, 11vw, 4.2rem) 'DM Serif Display', serif;
+  color: #5c4132;
+  margin: 25px 0 10px;
+}
+.thanks-photo {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 7px 19px #5a40304a;
+}
+.thanks-lead {
+  max-width: 720px;
+  margin: 28px auto;
+  font: 1.15rem/1.7 'DM Serif Display', serif;
+  color: #4b3b2f;
+}
+.thanks-note {
+  max-width: 660px;
+  margin: 0 auto 40px;
+  font: 1rem/1.7 'DM Serif Display', serif;
+  color: #5c4738;
+}
+.thanks-note a {
+  color: #5c4132;
+}
+.thanks-section .script {
+  font-size: 3.2rem;
+  line-height: 1.1;
+}
+.celebration {
+  margin-top: 46px;
+  font-size: .77rem;
+  color: #654d3b;
+}
+#open-invitation {
+  animation: invitationPulse 1.8s ease-in-out infinite;
+}
+@keyframes invitationPulse {
+  50% {
+    transform: scale(1.075);
+    box-shadow: 0 8px 23px #0006;
+  }
+}
+.gallery-video video {
+  display: block;
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  background: #2c211c;
+}
