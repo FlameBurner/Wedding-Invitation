@@ -11,7 +11,7 @@
   const gallery = document.querySelector('.gallery-track');
   document.querySelector('.gallery-arrow.previous').addEventListener('click',()=>gallery.scrollBy({left:-gallery.clientWidth*.9,behavior:'smooth'}));
   document.querySelector('.gallery-arrow.next').addEventListener('click',()=>gallery.scrollBy({left:gallery.clientWidth*.9,behavior:'smooth'}));
-  const wedding = new Date('2026-07-27T09:00:00+08:00');
+  const wedding = new Date('2026-07-27T16:00:00+08:00');
   function tick(){const d=Math.max(0,wedding-Date.now());const values=[Math.floor(d/86400000),Math.floor(d/3600000)%24,Math.floor(d/60000)%60,Math.floor(d/1000)%60];['days','hours','minutes','seconds'].forEach((id,i)=>document.getElementById(id).textContent=String(values[i]).padStart(2,'0'));} tick();setInterval(tick,1000);
   const observer=new IntersectionObserver(items=>items.forEach(item=>{if(item.isIntersecting){item.target.classList.add('in-view');observer.unobserve(item.target)}}),{threshold:.15});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
   const api = async (data = null) => { const response = await fetch('api.php', data ? {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)} : {}); const result = await response.json(); if (!response.ok) throw new Error(result.error || 'Something went wrong.'); return result; };
