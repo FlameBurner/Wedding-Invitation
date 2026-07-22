@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#493a37">
+  <title>Agung & Wulan | Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/updates.css">
+</head>
+<body class="invitation-locked">
+  <div id="intro" aria-live="polite" aria-label="Wedding introduction">
+    <p id="intro-wedding">The Wedding Of</p>
+    <h1 id="intro-names">Agung <span>&amp;</span> Wulan</h1>
+  </div>
+  <div id="cover" aria-label="Open invitation">
+    <div class="cover-photo"></div><div class="cover-shade"></div>
+    <div class="cover-content">
+      <p class="cover-kicker">The Wedding Of</p>
+      <h1>Agung <span>&amp;</span> Wulan</h1>
+      <p class="cover-date">Monday, 27 July 2026</p>
+      <div class="cover-guest">Yang terhormat<br><strong id="guest-name">Tamu Undangan</strong></div>
+      <button id="open-invitation">✉︎&nbsp; Buka Undangan</button>
+    </div>
+  </div>
+  <main>
+    <section class="hero" aria-label="Wedding invitation">
+      <div class="photo-rotator" aria-hidden="true">
+        <img class="slide active" src="assets/images/hero-reference.png" alt="">
+        <img class="slide" src="assets/images/bride-reference.png" alt="">
+        <img class="slide" src="assets/images/groom-reference.png" alt="">
+      </div>
+      <div class="shade"></div>
+      <div class="hero-content">
+        <p class="kicker">The Wedding Of</p>
+        <h1>Agung <span>&amp;</span> Wulan</h1>
+        <p class="date">Monday, 27 July 2026</p>
+        <a class="scroll-cue" href="#couple">Discover our story <span>↓</span></a>
+      </div>
+      <div class="dots" aria-label="Photo slideshow controls">
+        <button class="active" aria-label="Show photo 1"></button><button aria-label="Show photo 2"></button><button aria-label="Show photo 3"></button>
+      </div>
+    </section>
+
+    <section id="couple" class="couple-section">
+      <p class="section-kicker">With love and the blessing of our families</p>
+      <h2>Meet the couple</h2>
+      <article class="person groom reveal">
+        <div class="portrait"><img src="assets/images/groom-reference.png" alt="Portrait of Agung"></div>
+        <div class="person-copy">
+          <p class="script">The Groom</p>
+          <h3>Agung</h3>
+          <p>The Son of Mr. Kangin and Mrs. Kauh</p>
+          <a href="https://www.instagram.com/_agung.aditya?igsh=MTh5dHVub3d1MXIzYg==" class="social" target="_blank" rel="noopener" aria-label="Agung on Instagram">🅾 @agung</a>
+        </div>
+      </article>
+      <article class="person bride reveal">
+        <div class="portrait"><img src="assets/images/bride-reference.png" alt="Portrait of"></div>
+        <div class="person-copy">
+          <p class="script">The Bride</p>
+          <h3>Wulan</h3>
+          <p>The Daughter of Mr. Kangin and Mrs. Kauh</p>
+          <a href="https://www.instagram.com/_wulan.f?igsh=MWJwY3d3NDkxeXNkNw==" class="social" target="_blank" rel="noopener" aria-label="Wulan on Instagram">🅾 @wulan</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+      <p class="section-kicker">Our moments</p><h2>Galeri Kami</h2><div class="divider">— ♡ —</div>
+      <p class="gallery-note">Geser ke kiri atau kanan untuk melihat momen-momen indah kami.</p>
+      <div class="gallery-frame">
+      <button class="gallery-arrow previous" type="button" aria-label="Previous photo">←</button>
+      <div class="gallery-track" aria-label="Wedding photo gallery" tabindex="0">
+        <!-- Add your video as assets/videos/gallery-video.mp4. The poster is shown before it plays. -->
+        <figure class="gallery-video"><video controls playsinline preload="metadata" poster="assets/images/groom-reference.png"><source src="assets/videos/gallery-video.mp4" type="video/mp4">Your browser does not support video.</video></figure>
+        <!-- Replace these five image sources with your final gallery images. -->
+        <figure><img src="assets/images/hero-reference.png" alt="Wedding memory one"></figure>
+        <figure><img src="assets/images/bride-reference.png" alt="Wedding memory two"></figure>
+        <figure><img src="assets/images/groom-reference.png" alt="Wedding memory three"></figure>
+        <figure><img src="assets/images/hero-reference.png" alt="Wedding memory four"></figure>
+        <figure><img src="assets/images/bride-reference.png" alt="Wedding memory five"></figure>
+      </div>
+      <button class="gallery-arrow next" type="button" aria-label="Next photo">→</button></div>
+    </section>
+
+    <section id="save-date" class="save-date">
+      <div class="save-background" aria-hidden="true"></div>
+      <div class="save-overlay"></div>
+      <div class="save-content">
+        <p class="kicker">Save The</p><h2>Date</h2>
+        <article class="event-card reveal">
+          <p class="script">Memadik</p>
+          <p><strong>Monday, 27 July 2026</strong></p>
+          <p>At 09.00 – 10.00 WITA</p>
+          <p>Banjar Beja, Lalang-Linggah, Selemadeg Barat, Tabanan</p>
+          <a class="map-button" href="https://maps.app.goo.gl/ZiPN1aKqj5k6WdN88" target="_blank" rel="noopener">⌖&nbsp; Google Maps</a>
+        </article>
+        <div class="countdown reveal" aria-label="Countdown to the wedding">
+          <div><b id="days">00</b><span>Hari</span></div><div><b id="hours">00</b><span>Jam</span></div><div><b id="minutes">00</b><span>Menit</span></div><div><b id="seconds">00</b><span>Detik</span></div>
+        </div>
+        <button id="calendar" class="calendar-button">▣ &nbsp; Save The Date</button>
+      </div>
+    </section>
+
+    <section id="rsvp" class="rsvp-section">
+      <h2>Terima Kasih Telah Hadir</h2><div class="divider">— ♡ —</div>
+      <p class="lead">Terima kasih telah hadir untuk kami, mendukung kami, dan memberikan cinta Anda.</p>
+      <form id="rsvp-form" class="form-card">
+        <h3>Mohon Konfirmasi Kehadiran Anda</h3><label>Nama Anda<input required name="name" placeholder="Masukkan nama lengkap Anda"></label>
+        <fieldset><legend>Apakah Anda akan hadir?</legend><label><input required type="radio" name="attendance" value="Hadir"> Ya, saya akan hadir!</label><label><input type="radio" name="attendance" value="Tidak hadir"> Maaf, tidak bisa hadir</label></fieldset>
+        <label>Pesan spesial (opsional)<textarea name="message" placeholder="Bagikan pesan spesial atau kebutuhan makanan khusus..."></textarea></label><button type="submit">✈ &nbsp; Kirim RSVP</button><p class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+    <section id="wishes" class="wishes-section"><h2>Ucapan &amp; Doa</h2><div class="divider">— ♡ —</div><p class="lead">Tinggalkan ucapan dan doa terbaik Anda untuk kedua mempelai.</p>
+      <form id="wish-form" class="form-card"><label>Nama Anda<input required name="name" placeholder="Nama kamu"></label><label>Ucapan &amp; Doa<textarea required name="wish" placeholder="Contoh: Selamat atas pernikahannya!"></textarea></label><button type="submit">♡ &nbsp; Kirim Ucapan</button></form><div id="wish-list" class="wish-list" aria-live="polite"></div>
+    </section>
+    <section id="thanks" class="thanks-section">
+      <img src="assets/images/bride-reference.png" alt="Wedding flowers" class="thanks-photo">
+      <h2>Terima Kasih</h2><div class="divider">— ♡ —</div>
+      <p class="thanks-lead">Terima kasih telah hadir untuk kami, mendukung kami, dan memberikan cinta Anda. Kami berharap Anda dapat datang ke pesta kami dan bersenang-senang bersama kami!</p>
+      <p class="thanks-note"></p>
+      <p class="script">Dengan penuh cinta,<br>Agung &amp; Wulan</p><p class="celebration">Perayaan Pernikahan • 2026</p>
+    </section>
+  </main>
+  <button id="music-toggle" aria-label="Play background music" title="Play background music">♫</button><audio id="music" loop preload="metadata"><source src="assets/audio/wedding-melody.wav" type="audio/wav"></audio>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
